@@ -62,7 +62,7 @@ class FlutterTranslateGen extends AnnotationGenerator<TranslateKeysOptions> {
 
       var translationMap = getTranslationMap(jsonMap);
 
-      translationMap!.forEach((key, value) => (mapping[key] ??= <String>[]).add(value!));
+      translationMap!.forEach((key, value) => (mapping[key] ??= <String>[]).add(value));
     }
 
     List<LocalizedItem>? translations = [];
@@ -73,6 +73,9 @@ class FlutterTranslateGen extends AnnotationGenerator<TranslateKeysOptions> {
   }
 
   String? getKeyFieldName(String? key, TranslateKeysOptions? options) {
+    if (key == null){
+      return null;
+    }
     switch (options!.caseStyle) {
       case CaseStyle.titleCase:
         return Casing.titleCase(key, separator: options.separator);

@@ -12,9 +12,17 @@ dependencies:
   async: ^2.5.0
   build: ^2.0.1
   code_builder: ^4.0.0
-  dart_casing: ^1.0.1
+#  dart_casing: ^1.0.1
+  dart_casing:
+    git:
+      url: https://github.com/McCrafterIV/dart_casing
+      branch: master
   dart_style: ^2.0.0
-  dart_utils: ^1.0.2
+#  dart_utils: ^1.0.2
+  dart_utils:
+    git:
+      url: https://github.com/McCrafterIV/dart_utils
+      branch: master
   flutter_translate_annotations: ^2.0.0
   glob: ^2.0.1
   source_gen: ^1.0.0
