@@ -30,7 +30,7 @@ abstract class AnnotationGenerator<T> extends Generator {
 
   dynamic generateForAnnotatedElement(Element? element, ConstantReader? annotation, BuildStep? buildStep);
 
-  Stream<String>? normalizeGeneratorOutput(Object? value) {
+  Stream<String> normalizeGeneratorOutput(Object? value) {
     if (value == null /* == false */) {
       return const Stream.empty();
     } else if (value is Future) {
